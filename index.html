@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar v.1</title>
+    <style>
+      /* ----- Responsive navigation bar design for desktop screen ----- */
+
+      /* ----- CSS variables -----*/
+      :root {
+        --navbar-bg-color: #ffe4c4;
+        --link-color: #1290e4;
+      }
+
+      /* ----- CSS reset -----*/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--link-color);
+      }
+      a:hover {
+        text-decoration: underline;
+        color: blueviolet;
+      }
+
+      /* ----- HEADER -----*/
+
+      .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0.75rem;
+        background-color: var(--navbar-bg-color);
+      }
+
+      .logo {
+        padding: 0.5rem;
+      }
+      .logo a {
+        font-weight: bold;
+        font-size: 1.25rem;
+      }
+
+      ul.main-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 1.5rem;
+        padding: 0.5rem;
+      }
+
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.5rem;
+      }
+
+      /* ----- Utility class -----*/
+      .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        display: inline-block;
+        transition: all 0.2s ease-in-out;
+        color: whitesmoke;
+      }
+      .btn:hover {
+        filter: brightness(90%); /* for background color */
+        color: whitesmoke;
+      }
+
+      .btn--login {
+        background-color: #1eb952;
+      }
+
+      .btn--signup {
+        background-color: #0a89e4;
+      }
+
+      @media (max-width: 768px) {
+        .navbar-container {
+          flex-direction: column;
+        }
+
+        .actions {
+          margin-top: 1rem;
+        }
+      }
+
+      /* ----- FOOTER -----*/
+      .page-footer {
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.85rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="navbar-container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="#">Company Name</a>
+        </div>
+
+        <!-- Main navigation -->
+        <nav>
+          <ul class="main-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- CTA buttons -->
+        <div class="actions">
+          <a href="#" class="btn btn--login">Login</a>
+          <a href="#" class="btn btn--signup">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main></main>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <p>
+        &copy; 2025 Zafer Yilmaz -
+        <a href="https://github.com/zaferyilmaznet" target="_blank">GitHub</a>
+        - Navigation Bar 1
+      </p>
+    </footer>
+  </body>
+</html>
